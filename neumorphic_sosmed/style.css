@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+#232931 
+#4ecca3
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	background: #232931;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+
+
+/* Sosmed */
+.sosmed-wrapper {
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 auto;
+}
+.sosmed-wrapper .sosmed {
+	width: 100px;
+	height: 100px;
+	background: #232931;
+	box-shadow: 4px 4px 10px rgba(0,0,0,.4),
+				-4px -4px 10px rgba(255, 255, 255, .1);
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.sosmed-wrapper .sosmed .text {
+	position: absolute;
+	top: -80px;
+	font-size: 18px;
+	background: #4ecca3;
+	padding: 6px 12px;
+	white-space: nowrap;
+	font-weight: 600;
+	opacity: 0;
+	visibility: hidden;
+	border-radius: 4px;
+	transition: all .5s ease;
+}
+.sosmed-wrapper .sosmed .text::before {
+	content: '';
+	position: absolute;
+	border: 14px solid;
+	bottom: -28px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-color: #4ecca3 transparent transparent;
+}
+.sosmed-wrapper .sosmed:hover > .text {
+	top: -70px;
+	opacity: 1;
+	visibility: visible;
+}
+.sosmed-wrapper .sosmed .icon {
+	font-size: 42px;
+	color: rgba(0,0,0,.4);
+	transition: color .5s ease;
+}
+.sosmed-wrapper .sosmed:hover > .icon {
+	color: #4ecca3;
+}

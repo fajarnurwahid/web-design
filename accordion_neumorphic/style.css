@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/*#222831*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--b-shadow: 4px 4px 10px 0 rgba(0,0,0,.4);
+	--clr: rgba(255,255,255,.5);
+	--b-inset: inset 4px 4px 10px 0 rgba(0,0,0,.4);
+	--bg: #222831;
+	--border: 2px solid rgba(255,255,255,.1);
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+/* Accordion Menu */
+.container {
+	width: 30%;
+	padding: 0 18px;
+	border-radius: 6px;
+	box-shadow: var(--b-shadow);
+	border-top: var(--border);
+	border-left: var(--border);
+}
+.container .accordion-item {
+	width: 100%;
+	margin: 18px 0;
+}
+.container .accordion-item .head {
+	width: 100%;
+	border-radius: 6px;
+	box-shadow: var(--b-shadow);
+	border-top: var(--border);
+	border-left: var(--border);
+	padding: 8px 18px;
+	position: relative;
+	z-index: 10;
+	background: var(--bg);
+	cursor: pointer;
+}
+.container .accordion-item .head p {
+	color: var(--clr);
+	font-size: 18px;
+}
+.container .accordion-item .head p::before {
+	content: '+';
+	position: absolute;
+	right: 18px;
+	transition: all .5s;
+}
+.container .accordion-item .head.active p::before {
+	transform: rotate(45deg);
+	transition: all .5s;
+}
+.container .accordion-item .body {
+	width: 100%;
+	box-shadow: var(--b-inset);
+	border-right: var(--border);
+	border-bottom: var(--border);
+	border-radius: 6px;
+	position: relative;
+	top: -6px;
+	background: var(--bg);
+	overflow: hidden;
+	max-height: 0;
+	transition: all .5s;
+}
+.container .accordion-item .body.active {
+	max-height: 500px;
+	transition: all .5s;
+}
+.container .accordion-item .body p {
+	margin: 14px 18px 8px;
+	color: var(--clr);
+	font-size: 14px;
+	line-height: 160%;
+}

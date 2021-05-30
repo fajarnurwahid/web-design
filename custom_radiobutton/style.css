@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--bg: #867ae9;
+	--checked: #185adb;
+}
+
+body {
+	display: flex;
+	min-height: 100vh;
+	background: var(--bg);
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+
+.container {
+	width: 400px;
+	border-radius: 8px;
+	box-shadow: 10px 10px 24px 0 rgba(0,0,0,.1);
+	background: #fff;
+	padding: 18px;
+}
+.container .title {
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+.container .radio input {
+	display: none;
+}
+.container .radio {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.container .radio .radio-item {
+	margin: 8px 0;
+	display: inline-flex;
+	justify-content: start;
+	align-items: center;
+	height: 36px;
+	padding: 0 18px 0 calc((36px - 24px) / 2);
+	border-radius: 18px;
+	transition: .3s;
+}
+.container .radio .radio-item .radio-btn {
+	width: 24px;
+	height: 24px;
+	border: 2px solid #ddd;
+	border-radius: 50%;
+	margin-right: 12px;
+	position: relative;
+	cursor: pointer;
+	transition: .3s;
+}
+.container .radio .radio-item .radio-btn::before {
+	position: absolute;
+	content: '';
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: #fff;
+	transition: .3s;
+}
+.container .radio .radio-item .text {
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+
+
+.container .radio input#smaller:checked ~ .radio-item.smaller {
+	background: #eee;
+}
+.container .radio input#smaller:checked ~ .radio-item.smaller .radio-btn {
+	background: var(--checked);
+	border-color: var(--checked);
+}
+
+
+.container .radio input#small:checked ~ .radio-item.small {
+	background: #eee;
+}
+.container .radio input#small:checked ~ .radio-item.small .radio-btn {
+	background: var(--checked);
+	border-color: var(--checked);
+}
+
+
+.container .radio input#medium:checked ~ .radio-item.medium {
+	background: #eee;
+}
+.container .radio input#medium:checked ~ .radio-item.medium .radio-btn {
+	background: var(--checked);
+	border-color: var(--checked);
+}
+
+
+.container .radio input#large:checked ~ .radio-item.large {
+	background: #eee;
+}
+.container .radio input#large:checked ~ .radio-item.large .radio-btn {
+	background: var(--checked);
+	border-color: var(--checked);
+}
+
+
+.container .radio input#extra-large:checked ~ .radio-item.extra-large {
+	background: #eee;
+}
+.container .radio input#extra-large:checked ~ .radio-item.extra-large .radio-btn {
+	background: var(--checked);
+	border-color: var(--checked);
+}

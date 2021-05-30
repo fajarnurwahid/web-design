@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Neumorphic Accordion Menu</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="accordion-item">
+			<div class="head">
+				<p>List Item 1</p>
+			</div>
+			<div class="body">
+				<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Soluta autem ipsam modi. Illo nostrum a veritatis eius sint eveniet eligendi qui minima aliquid similique molestiae vel placeat iure, voluptate consectetur.</p>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<div class="head">
+				<p>List Item 2</p>
+			</div>
+			<div class="body">
+				<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Soluta autem ipsam modi. Illo nostrum a veritatis eius sint eveniet eligendi qui minima aliquid similique molestiae vel placeat iure, voluptate consectetur.</p>
+			</div>
+		</div>
+		<div class="accordion-item">
+			<div class="head">
+				<p>List Item 3</p>
+			</div>
+			<div class="body">
+				<p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Soluta autem ipsam modi. Illo nostrum a veritatis eius sint eveniet eligendi qui minima aliquid similique molestiae vel placeat iure, voluptate consectetur.</p>
+			</div>
+		</div>
+	</div>
+
+
+<script>
+	const itemHead = document.querySelectorAll('.container .accordion-item .head');
+	const itemBody = document.querySelectorAll('.container .accordion-item .body');
+
+	for (let i in itemHead) {
+		itemHead[i].addEventListener('click', function () {
+			itemBody[i].classList.toggle('active');
+			this.classList.toggle('active');
+		});
+	}
+</script>
+</body>
+</html>

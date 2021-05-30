@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neumorphism Login Form</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link id="style-css" rel="stylesheet" href="dark.css">
+</head>
+<body>
+	
+	<div class="form-wrapper">
+		<div class="user-icon">
+			<i class="fas fa-user"></i>
+		</div>
+		<h2 class="title">Login</h2>
+		<form action="#">
+			<div class="form">
+				<input type="email" id="email" placeholder="Email">
+			</div>
+			<div class="form">
+				<input type="password" id="password" placeholder="Password">
+			</div>
+			<label for="remember" class="remember-me">
+				<input type="checkbox" id="remember">
+				<span class="checkbox"></span>
+				<span class="text">Remember me</span>
+			</label>
+			<button type="submit">Login</button>
+		</form>
+		<p class="or"></p>
+		<div class="sosmed">
+			<a href="#">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+			<a href="#">
+				<i class="fab fa-google"></i>
+			</a>
+			<a href="#">
+				<i class="fab fa-apple"></i>
+			</a>
+		</div>
+		<div class="mode" onclick=swapStyleMode()>
+			<i class="fas fa-moon"></i>
+		</div>
+	</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

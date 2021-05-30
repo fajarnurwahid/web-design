@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+
+/* Switcher */
+input {
+	display: none;
+}
+
+.wrapper {
+	width: 120px;
+	height: 60px;
+	border: 4px solid #d72323;
+	border-radius: 30px;
+	margin: 10px 0;
+	position: relative;
+}
+.wrapper.fill {
+	background: #d72323;
+}
+
+.wrapper label {
+	width: calc(60px - 16px);
+	height: calc(60px - 16px);
+	border-radius: 50%;
+	background: #d72323;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 4px;
+	transition: all .3s;
+	cursor: pointer;
+}
+.wrapper.fill label {
+	background: #fff;
+}
+.wrapper label::before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 700;
+	content: '\f00d';
+	font-size: 20px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+.wrapper.outline label::before {
+	color: #fff;
+}
+.wrapper.fill label::before {
+	color: #d72323;
+}
+input#switch-outline:checked ~ .wrapper.outline label {
+	left: calc(120px - 60px + 4px);
+	background: #81b214;
+}
+input#switch-outline:checked ~ .wrapper.outline {
+	border: 4px solid #81b214;
+}
+input#switch-fill:checked ~ .wrapper.fill {
+	border: 4px solid #81b214;
+	background: #81b214;
+}
+input#switch-fill:checked ~ .wrapper.fill label {
+	left: calc(120px - 60px + 4px);
+}
+input#switch-fill:checked ~ .wrapper.fill label::before {
+	color: #81b214;
+	content: '\f00c';
+}
+input#switch-outline:checked ~ .wrapper.outline label::before {
+	content: '\f00c';
+}
+.wrapper::before {
+	content: 'OFF';
+	position: absolute;
+	right: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: 700;
+	color: #d72323;
+}
+.wrapper.fill::before {
+	color: #fff
+}
+input#switch-outline:checked ~ .wrapper.outline::before {
+	content: 'ON';
+	right: calc(120px - 50px);
+	color: #81b214;
+}
+input#switch-fill:checked ~ .wrapper.fill::before {
+	content: 'ON';
+	right: calc(120px - 50px);
+}

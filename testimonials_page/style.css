@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	font-family: 'Poppins', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+
+/* Testimonial */
+.container {
+	width: 600px;
+	position: relative;
+}
+.container .title {
+	text-align: center;
+	position: relative;
+	margin-bottom: 18px;
+}
+.container .title::before {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80px;
+	height: 4px;
+	background: #ff449f;
+}
+.container .wrapper {
+	width: 600px;
+	height: 300px;
+	border-radius: 8px;
+	box-shadow: 0 0 24px 0 rgba(0, 0, 0, .1);
+	overflow: hidden;
+}
+.container .wrapper .testimonials {
+	display: flex;
+	align-items: center;
+	position: relative;
+	transition: all .5s;
+}
+.container .wrapper .testimonials .testi-box {
+	width: 600px;
+	padding: 18px 0;
+}
+.container .wrapper .testimonials .testi-box .head {
+	width: 600px;
+	padding: 0 18px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.container .wrapper .testimonials .testi-box .head .img {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	border: 4px solid #eee;
+	overflow: hidden;
+	position: relative;
+}
+.container .wrapper .testimonials .testi-box .head .img img {
+	width: 120px;
+	object-fit: cover;
+	position: absolute;
+	top: -14px;
+	left: -36px;
+}
+.container .wrapper .testimonials .testi-box .head .profile {
+	flex: 1;
+	padding-left: 18px;
+}
+.container .wrapper .testimonials .testi-box .head .profile .name {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 130%;
+}
+.container .wrapper .testimonials .testi-box .head .profile .work {
+	font-size: 16px;
+	font-weight: 400;
+	color: #ccc;
+	line-height: 130%;
+}
+.container .wrapper .testimonials .testi-box .head .rate p {
+	font-size: 20px;
+	font-weight: 600;
+}
+.container .wrapper .testimonials .testi-box .head .rate p .fas {
+	color: #ffc93c;
+}
+.container .wrapper .testimonials .testi-box .body {
+	width: 600px;
+	padding: 18px 18px 0;
+}
+.container .wrapper .testimonials .testi-box .body p {
+	font-size: 16px;
+	line-height: 160%;
+}
+.container .arrow span {
+	position: absolute;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #eee;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	top: 55%;
+	transition: all .3s;
+}
+.container .arrow span.left {
+	left: -50px;
+}
+.container .arrow span.right {
+	right: -50px;
+}
+.container .arrow span:hover {
+	background: #ff449f;
+	color: #fff
+}
+.container .indicator {
+	position: absolute;
+	left: 50%;
+	bottom: -40px;
+	transform: translateX(-50%);
+	display: flex;
+	align-items: center;
+}
+.container .indicator span {
+	display: block;
+	width: 12px;
+	height: 12px;
+	border: 3px solid #ff449f;
+	margin: 0 3px;
+	border-radius: 50%;
+	transition: transform .3s;
+	cursor: pointer;
+}
+.container .indicator span.active {
+	background: #ff449f;
+	transform: scale(1.5);
+}
