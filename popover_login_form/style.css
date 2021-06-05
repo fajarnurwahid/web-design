@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--blue: #185adb;
+	--green: #4aa96c;
+	--red: #ff7b54;
+	--shade: #233e8b;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--blue);
+}
+
+
+
+
+/* Popover */
+.link {
+	position: relative;
+	font-size: 1.5rem;
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+form {
+	position: absolute;
+	bottom: 4rem;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	border-radius: .5rem;
+	padding: 1rem;
+	width: 280px;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .5s, visibility .5s, bottom .5s;
+}
+form .form {
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.form input {
+	width: 100%;
+	padding: .5rem 1rem;
+	border: 2px solid #eee;
+	font-size: 1rem;
+	outline: none;
+}
+.form input:required:valid {
+	border-color: var(--green);
+}
+form button {
+	display: block;
+	width: 100%;
+	padding: .5rem 0;
+	background: var(--blue);
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: background .5s;
+}
+form button:hover {
+	background: var(--shade);
+}
+form::before {
+	content: '';
+	position: absolute;
+	border: 1rem solid;
+	border-color: #fff transparent transparent;
+	bottom: -2rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.link:hover form {
+	opacity: 1;
+	visibility: visible;
+	bottom: 3.5rem;
+}
