@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+	<title>Custom Range Slider</title>
+</head>
+<body>
+
+	<p class="text-box">Customize your font size.</p>
+
+	<div class="container">
+		<input type="range" min="8" max="30" value="10">
+		<p class="val"></p>
+	</div>
+
+
+	<script>
+		const textBox = document.querySelector('.text-box');
+		const p = document.querySelector('.val');
+		const input = document.querySelector('input[type=range]');
+
+		textBox.style.fontSize = `${input.value}px`;
+		p.innerHTML = input.value;
+
+		input.addEventListener('input', function() {
+			p.innerHTML = this.value;
+			textBox.style.fontSize = `${this.value}px`;
+		});
+	</script>
+</body>
+</html>
