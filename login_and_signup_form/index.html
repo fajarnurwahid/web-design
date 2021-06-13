@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+	<title>Login and Signup Form</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="navigator">
+			<label for="login" class="login">Login</label>
+			<label for="signup" class="signup">Signup</label>
+		</div>
+		<div class="forms">
+			<input type="radio" checked="" name="type" id="login">
+			<input type="radio" name="type" id="signup">
+
+			<form action="#" class="login">
+				<div class="form">
+					<span class="icon"><i class="fas fa-envelope"></i></span>
+					<input type="email" placeholder="Email">
+				</div>
+				<div class="form">
+					<span class="icon"><i class="fas fa-lock"></i></span>
+					<input type="password" placeholder="Password">
+				</div>
+				<p><a href="#" class="forgot-pass">Forgot password?</a></p>
+				<button type="submit">Login</button>
+			</form>
+
+			<form action="#" class="signup">
+				<div class="form">
+					<span class="icon"><i class="fas fa-user"></i></span>
+					<input type="text" placeholder="Name">
+				</div>
+				<div class="form">
+					<span class="icon"><i class="fas fa-envelope"></i></span>
+					<input type="email" placeholder="Email">
+				</div>
+				<div class="form">
+					<span class="icon"><i class="fas fa-lock"></i></span>
+					<input type="password" placeholder="Password">
+				</div>
+				<div class="form">
+					<span class="icon"><i class="fas fa-lock"></i></span>
+					<input type="password" placeholder="Confirm password">
+				</div>
+				<button type="submit">Signup</button>
+			</form>
+		</div>
+	</div>
+
+
+	<script>
+		const labelLogin = document.querySelector('.navigator label.login');
+		const labelSignup = document.querySelector('.navigator label.signup');
+		const inputLogin = document.querySelector('input[type="radio"]#login');
+		const inputSignup = document.querySelector('input[type="radio"]#signup');
+
+		const formLogin = document.querySelector('form.login');
+		const formSignup = document.querySelector('form.signup');
+
+		formLogin.addEventListener('submit', function () {
+			console.log('Form login submitted');
+		});
+
+		formSignup.addEventListener('submit', function () {
+			console.log('Form signup submitted');
+		});
+
+		labelLogin.classList.add('active');
+
+		labelLogin.addEventListener('click', function() {
+			this.classList.add('active');
+			labelSignup.classList.remove('active');
+		});
+
+		labelSignup.addEventListener('click', function() {
+			this.classList.add('active');
+			labelLogin.classList.remove('active');
+		});
+	</script>
+	
+</body>
+</html>

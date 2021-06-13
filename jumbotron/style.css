@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+
+:root {
+	--orange: #fb9300;
+	--dark: #022e57;
+}
+
+.container {
+	max-width: 1200px;
+	padding: 0 1rem;
+	margin: 0 auto;
+	height: 100%;
+}
+
+
+
+/* Navbar */
+nav {
+	width: 100%;
+	height: 70px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	transition: .5s;
+}
+nav.active {
+	background: #fff;
+}
+nav .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+nav .logo {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #fff;
+}
+nav.active .logo,
+nav.active .nav-menu li a {
+	color: var(--dark);
+}
+nav .nav-menu {
+	display: flex;
+	align-items: center;
+}
+nav .nav-menu li {
+	margin-left: 2rem;
+}
+nav .nav-menu li a {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #fff;
+	transition: color .5s;
+}
+nav .nav-menu li a .icon {
+	display: inline-block;
+	margin-right: .5rem;
+}
+nav .nav-menu li a:hover {
+	color: var(--orange);
+}
+nav .menu-bar {
+	font-size: 1rem;
+	color: #fff;
+	display: none;
+}
+nav.active .menu-bar {
+	color: var(--dark);
+}
+
+
+
+
+
+/* Jumbotron */
+#jumbotron {
+	width: 100%;
+	background: url(img/bg.png);
+	background-size: cover;
+	padding: 10rem 0;
+	min-height: 100vh;
+	position: relative;
+}
+#jumbotron .title {
+	font-size: 3rem;
+	font-weight: 600;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+#jumbotron .text {
+	font-size: 1rem;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	margin-bottom: 4rem;
+}
+#jumbotron .content {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+}
+#jumbotron .content .video {
+	width: 460px;
+	height: 260px;
+	border-radius: .5rem;
+	border: 4px solid var(--dark);
+	background: var(--dark);
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#jumbotron .content .video .thumbnail {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: 10;
+}
+#jumbotron .content .video .yt-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+#jumbotron .content .video .play-btn {
+	display: inline-block;
+	padding: 1rem 2rem;
+	border-radius: .5rem;
+	background: var(--dark);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: 500;
+	position: relative;
+	z-index: 11;
+	cursor: pointer;
+	animation: btnAnimate 1s linear infinite alternate;
+}
+#jumbotron .content .video .play-btn.hide,
+#jumbotron .content .video .thumbnail.hide {
+	display: none;
+}
+@keyframes btnAnimate {
+	0% {
+		transform: scale(1.0);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+#jumbotron .content .features {
+	padding-left: 2rem;
+}
+#jumbotron .content .features li {
+	margin: .5rem 0;
+}
+#jumbotron .content .features li {
+	color: #fff;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+#jumbotron .content .features li .icon {
+	display: inline-block;
+	margin-right: 1rem;
+}
+#jumbotron .waves {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+	#jumbotron .content {
+		flex-direction: column;
+		align-items: center;
+	}
+	#jumbotron .content .features {
+		padding: 2rem 0 0;
+	}
+}
+
+
+@media screen and (max-width: 576px) {
+	#jumbotron .title {
+		font-size: 2rem;
+	}
+	#jumbotron .content .video {
+		width: 300px;
+		height: 150px;
+	}
+	nav .menu-bar {
+		display: block;
+		position: relative;
+		z-index: 120;
+	}
+	nav .nav-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background: #fff;
+		z-index: 110;
+		flex-direction: column;
+		justify-content: center;
+		transform: translateX(100%);
+		transition: .5s;
+	}
+	nav .nav-menu.active {
+		transform: translateX(0);
+	}
+	nav .nav-menu.active ~ .menu-bar {
+		color: var(--dark);
+	}
+	nav .nav-menu li {
+		margin: 1rem 0;
+	}
+	nav .nav-menu li a {
+		color: var(--dark);
+	}
+	#jumbotron .content .features li {
+		font-size: 1rem;
+	}
+}

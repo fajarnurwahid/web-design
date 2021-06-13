@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+:root {
+	--bg: #2940d3;
+	--shade: #1F2E92;
+}
+
+body {
+	min-height: 100vh;
+	background: var(--bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+/* Form */
+.container {
+	max-width: 768px;
+	width: 576px;
+}
+.navigator {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+.navigator label {
+	flex: 1;
+	padding: 16px 0;
+	text-align: center;
+	font-size: 18px;
+	background: #ddd;
+	border-radius: 6px 6px 0 0;
+	cursor: pointer;
+}
+.navigator label.active {
+	background: #fff;
+	color: var(--bg);
+	font-weight: 500;
+}
+
+.forms {
+	width: 100%;
+	padding: 24px;
+	background: #fff;
+	border-radius: 0 0 6px 6px;
+}
+form {
+	width: 100%;
+}
+form .form {
+	width: 100%;
+	margin-bottom: 16px;
+	position: relative;
+}
+form .form input {
+	width: 100%;
+	border: 2px solid #ddd;
+	padding: 16px 24px 16px 48px;
+	outline: none;
+	font-size: 16px;
+}
+form .form .icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 18px;
+}
+form p {
+	margin-bottom: 16px;
+}
+form p .forgot-pass {
+	color: var(--bg);
+	text-decoration: none;
+	font-size: 16px;
+}
+form button {
+	display: block;
+	width: 100%;
+	text-align: center;
+	border-radius: 6px;
+	background: var(--bg);
+	padding: 16px 0;
+	transition: background .5s;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	font-weight: 500;
+	color: #fff;
+	cursor: pointer;
+}
+form button:hover {
+	background: var(--shade);
+}
+
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]#login:checked ~ form.signup {
+	display: none;
+}
+input[type="radio"]#signup:checked ~ form.login {
+	display: none;
+}
