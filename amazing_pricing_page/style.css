@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+:root {
+	--clr: #2940D3;
+	--shade: #03256C;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: var(--clr);
+}
+
+
+
+/* Content */
+.container {
+	width: 396px;
+	background: #fff;
+	border-radius: 8px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .2);
+	padding: 18px;
+}
+.indicator {
+	width: 100%;
+	border-radius: 36px;
+	background: #eee;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+.indicator p {
+	width: 120px;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 8px 0;
+	cursor: pointer;
+	position: relative;
+	z-index: 20;
+	transition: .5s;
+	transition-delay: .2s;
+}
+.indicator p.active {
+	color: #fff;
+}
+.indicator .navigator {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 120px;
+	background: var(--clr);
+	border-radius: 36px;
+	border: 3px solid #eee;
+	z-index: 10;
+	transition: .5s ease;
+}
+.wrapper {
+	width: 100%;
+	margin-top: 36px;
+	overflow: hidden;
+}
+.pricing-box {
+	width: 300%;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	transition: .5s ease;
+}
+.pricing-box .pricing {
+	width: 100%;
+}
+.pricing .price {
+	width: 80px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	font-size: 48px;
+	font-weight: 600;
+}
+.pricing .price::before {
+	content: '$';
+	position: absolute;
+	top: 10px;
+	left: -6px;
+	font-size: 24px;
+}
+.pricing .price::after {
+	content: '/month';
+	position: absolute;
+	bottom: 10px;
+	right: -56px;
+	font-size: 18px;
+	color: #ccc;
+	font-weight: 400;
+}
+.features {
+	margin-top: 18px;
+	width: 100%;
+}
+.features li {
+	padding: 8px 0;
+	border-bottom: 1px solid #ccc;
+	font-size: 18px;
+}
+.btn {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 500;
+	text-align: center;
+	display: block;
+	width: 100%;
+	padding: 12px 0;
+	background: var(--clr);
+	border-radius: 4px;
+	transition: .5s ease;
+	color: #fff;
+	margin-top: 18px;
+}
+.btn:hover {
+	background: var(--shade);
+}
