@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- My CSS -->
+	<link rel="stylesheet" href="style.css">
+	<title>Multi Step Registration Form</title>
+</head>
+<body>
+
+	<div class="container">
+		<h1 class="title">Register</h1>
+		<div class="indicator">
+			<span class="line"><span></span></span>
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+		</div>
+		<form action="#">
+			<div class="tab">
+				<p>Name</p>
+				<div class="form">
+					<input type="text" placeholder="First name">
+				</div>
+				<div class="form">
+					<input type="text" placeholder="Last name">
+				</div>
+			</div>
+			<div class="tab">
+				<p>Contact</p>
+				<div class="form">
+					<input type="email" placeholder="Email">
+				</div>
+				<div class="form">
+					<input type="number" placeholder="Phone number">
+				</div>
+			</div>
+			<div class="tab">
+				<p>Login info</p>
+				<div class="form">
+					<input type="text" placeholder="Username">
+				</div>
+				<div class="form">
+					<input type="password" placeholder="Password">
+				</div>
+				<div class="form">
+					<input type="password" placeholder="Confirm password">
+				</div>
+			</div>
+			<div class="btn">
+				<button type="button" class="prev">Previous</button>
+				<button type="button" class="next">Next</button>
+			</div>
+		</form>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>
